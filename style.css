@@ -1,10 +1,13 @@
-body{
+header{
+    text-align: left;
+    font-size: 48px;
     margin: 0;
+    border-bottom: 5px solid #aaaaaa50;
 }
 .subject {
     display: flex;
     /*height: 100px;*/
-    font-size: 100px;
+    font-size: 111px;
     text-align: center;
     align-items: center;
     justify-content: center;
