@@ -1,9 +1,14 @@
 body{
     margin: 0;
+    padding-top: 52px;
 }
 header{
+    width: 100%;
     height: 50px;
     margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
     background-color: #22cc00;
     border: 1px solid #00F;
 }
@@ -47,4 +52,109 @@ h1{
     margin: 8px;
     font-family: cursive;
     justify-content: center;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.ads{
+    display: flex;
+    margin-left: 20px;
+    margin-right: 20px;
+    /*border: 1px solid #000;*/
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+.border{
+    width: auto;
+    height: 3px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #888888;
+}
+.icon{
+    width: 80px;
+    height: 80px;
+}
+.text{
+    width: 100%;
+    margin-right: 80px;
+    justify-content: center;
+    text-align: center;
+    font-size: 75px;
+    font-family: "Yu Gothic",monospace;
+    font-weight: 500;
+}
+.twitter{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    /*border: 1px solid #00F;*/
+}
+.discord{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    /*border: 1px solid #00F;*/
+}
+/*.discordicon{
+    display: flex;
+    width: 80px;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+    background-color: #5865F2;
+}*/
+.facebook{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    /*border: 1px solid #00F;*/
+}
+.github{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    /*border: 1px solid #00F;*/
+}
+.reddit{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    /*border: 1px solid #00F;*/
+}
+.steam{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    /*border: 1px solid #00F;*/
+}
+.twitch{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    /*border: 1px solid #00F;*/
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 120px;
+    margin: 0;
+    align-items: center;
+    background-color: #e7e7e7;
+}
+.attribution{
+    width: 100%;
+    margin: 3px 0;
+    font-size: 8px;
+    text-align: center;
 }
