@@ -71,14 +71,15 @@ h2{
     flex-wrap: wrap;
     justify-content: center;
 }
-.advertisement{
+.advertising{
     display: flex;
     margin: 0 20px;
     padding: 0 10px;
     /*border: 1px solid #000;*/
     flex-direction: row;
     flex-wrap: wrap;
-    align-content: flex-start;
+    align-content: start;
+    justify-content: center;
 }
 .ads{
     display: flex;
