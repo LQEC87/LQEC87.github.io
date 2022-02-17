@@ -66,7 +66,6 @@ h2{
     display: flex;
     margin-left: 20px;
     margin-right: 20px;
-    /*border: 1px solid #000;*/
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
@@ -75,7 +74,6 @@ h2{
     display: flex;
     margin: 0 20px;
     padding: 0 10px;
-    /*border: 1px solid #000;*/
     flex-direction: row;
     flex-wrap: wrap;
     align-content: start;
@@ -84,7 +82,6 @@ h2{
 .ads{
     display: flex;
     margin-left: 20px;
-    /*border: 1px solid #000;*/
     flex-direction: row;
     flex-wrap: wrap;
     align-content: flex-start;
@@ -119,48 +116,6 @@ h2{
     text-decoration: none;
     color: black;
 }
-/*.twitter{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 150px;
-}
-.discord{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 150px;
-}
-.facebook{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 150px;
-}
-.github{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 150px;
-}
-.reddit{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 150px;
-}
-.steam{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 150px;
-}
-.twitch{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 150px;
-}*/
 footer{
     display: flex;
     flex-direction: column;
@@ -175,4 +130,20 @@ footer{
     margin: 3px 0;
     font-size: 8px;
     text-align: center;
+}
+@media screen and (max-width: 500px) {
+    .L-pic{
+        width: 20%;
+        margin-left: 20px;
+        margin-right: 15px;
+        border-radius: 50%;
+        border: 2px solid #ff0000;
+        align-content: space-around;
+    }
+    .links{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100px;
+    }
 }
