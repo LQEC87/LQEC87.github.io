@@ -4,7 +4,7 @@ document.querySelector('#tested').onclick = function(){
     myHeading.textContent = 'Hello, world!';
 };
 document.querySelector('#no').onclick = function(){
-    myHeading.textContent = 'You have to test, so please check javascript.net';
+    myHeading.textContent = 'You have to test, so please check javascript.com';
 };
 document.querySelector('#reset').onclick = function(){
     myHeading.textContent = DefaultText;
