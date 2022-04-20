@@ -62,6 +62,7 @@ ul{
     color: #444444;
 }
 .rotate{
+    font-weight: bold;
     cursor: pointer;
     user-select: none;
     transform: rotate(-90deg);
