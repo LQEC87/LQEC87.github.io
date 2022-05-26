@@ -32,3 +32,9 @@ button{
 .count{
     font-size: xx-large;
 }
+.backto{
+    margin: 80%;
+    width: 20%;
+    height: 55px;
+    text-align: center;
+}
