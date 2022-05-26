@@ -34,3 +34,7 @@ document.getElementById('dataINC').onclick = function(){
 document.getElementById('dataDEC').onclick = function(){
     countdisplay.textContent = 'count:' + data(false);
 };
+
+document.querySelector('.backto').onclick = function(){
+    location.href = 'https://lqec87.github.io/main/main'
+}
