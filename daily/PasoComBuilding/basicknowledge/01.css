@@ -41,6 +41,23 @@ header{
     border-radius: 5px;
     box-shadow: 2px 2px 4px #ffff00;
 }
+.dictionaly{
+    padding: 7px;
+    width: 100%;
+    color: #151;
+}
+.word{
+    margin: 7px;
+    font-size: 220px;
+    text-align: center;
+    background-color: #fac;
+    border-radius: 2px;
+}
+.expression{
+    margin-left: 42px;
+    text-align: left;
+    font-size: 9px;
+}
 
 .right{
     left: 0;
