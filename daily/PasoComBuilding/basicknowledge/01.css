@@ -43,7 +43,8 @@ header{
     box-shadow: 2px 2px 4px #ffff00;
 }
 .dictionaly{
-    padding: 17px;
+    margin: 0;
+    padding: 0;
     width: 100%;
 }
 .word{
