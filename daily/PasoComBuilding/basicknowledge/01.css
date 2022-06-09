@@ -17,6 +17,7 @@ header{
     left: 0;
     background-color: #55bb66;
     border: 1px solid darkblue;
+    z-index: 1;
 }
 .L-pic{
     margin: 23px;
