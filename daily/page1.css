@@ -32,6 +32,13 @@ button{
 .count{
     font-size: xx-large;
 }
+.fade{
+    animation: fadeIn 0.2s ease 0.3s 1 normal;
+}
+@keyflames fadeIn{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
 .backto{
     margin: 0% 0% 0% 80%;
     width: 20%;
