@@ -39,6 +39,13 @@ button{
     0% {opacity: 0;}
     100% {opacity: 1;}
 }
+.textbox{
+    margin: 0;
+    height: 88px;
+    width: 50%;
+    font-size: 18px;
+    border: 1px solid #d00;
+}
 .backto{
     margin: 0% 0% 0% 80%;
     width: 20%;
