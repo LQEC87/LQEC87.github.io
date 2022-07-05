@@ -39,19 +39,18 @@ var primeCheck = true;
 const inputbox = document.getElementById('inputbox');
 const textbox = document.querySelector('.textbox');
 document.getElementById('enter').onclick = function(){
-    var number = 2;
-    do{
-        number = Math.abs(Math.trunc(inputbox.value));
-    }while(number == 1 || number == "");
-    for(let i = 2;i<number;i++){
-        if(number % i === 0){
-            primeCheck = false;
-            textbox.textContent = 'NONprimeNumber.';
-            break;
+    var number = Math.abs(Math.trunc(inputbox.value));
+    if(number != 1 && number != ""){
+        for(let i = 2;i<number;i++){
+            if(number % i === 0){
+                primeCheck = false;
+                textbox.textContent = 'NONprimeNumber.';
+                break;
+            }
         }
-    }
-    if(primeCheck){
-        textbox.textContent = toString(number) + ' is PrimeNumber.';
+        if(primeCheck){
+            textbox.textContent = toString(number) + ' is PrimeNumber.';
+        }
     }
 };
 
