@@ -35,6 +35,26 @@ document.getElementById('dataDEC').onclick = function(){
     countdisplay.textContent = 'count:' + data(false);
 };
 
+var primeCheck = true;
+const inputbox = document.getElementById('inputbox');
+const textbox = document.querySelector('.textbox');
+document.getElementById('enter').onclick = function(){
+    var number = 2;
+    do{
+        number = Abs(Math.trunc(inputbox.value));
+    }while(number == 1);
+    for(let i = 2;i<number;i++){
+        if(number % i === 0){
+            primeCheck = false;
+            textbox.textContent = 'NONprimeNumber.';
+            break;
+        }
+    }
+    if(primeCheck){
+        textbox.textContent = toString(number) + ' is PrimeNumber.';
+    }
+};
+
 document.querySelector('.backto').onclick = function(){
     location.href = 'https://lqec87.github.io/main/main'
 }
