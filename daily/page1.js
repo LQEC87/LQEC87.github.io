@@ -42,7 +42,7 @@ document.getElementById('enter').onclick = function(){
     var number = 2;
     do{
         number = Abs(Math.trunc(inputbox.value));
-    }while(number == 1);
+    }while(number == 1 || number == "");
     for(let i = 2;i<number;i++){
         if(number % i === 0){
             primeCheck = false;
