@@ -49,7 +49,7 @@ document.getElementById('enter').onclick = function(){
             }
         }
         if(primeCheck){
-            textbox.textContent = number.toString() + ' is PrimeNumber.';
+            textbox.textContent = number + ' is PrimeNumber.';
         }
     }
 };
