@@ -43,7 +43,8 @@ button{
     margin: 0;
     height: 88px;
     width: 50%;
-    font-size: 18px;
+    color: #00f;
+    font-size: 45px;
     border: 1px solid #d00;
 }
 .backto{
