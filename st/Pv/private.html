@@ -6,18 +6,43 @@
     </head>
     <body>
         <script type="text/javascript">
-            var Fapi = Boolean( window.File );
+            // File API実装チェック
+            var Fapi = Boolean(window.File);
             if (Fapi) {
-                window.alert("You can use FileAPI.");
+                window.alert("File APIが実装されてます。");
+                // File APIが実装されている場合には、dropイベントを登録
+                document.getElementById("drop").addEventListener("drop", onDrop, false);
             } else {
-                window.alert("it can't use FileAPI on this browser.");
+                window.alert("本ブラウザではFile APIが使えません");
+            }
+
+            // Drop領域にドロップした際のファイルのプロパティ情報読み取り処理
+            function onDrop(event) {
+                // （1）ドロップされたファイルのfilesプロパティを参照
+                var files = event.dataTransfer.files;
+                var disp = document.getElementById("disp");
+
+                disp.innerHTML = "";
+                for (var i = 0; i < files.length; i++) {
+                    var f = files[i];
+                    // （2）ファイル名とサイズを表示
+                    disp.innerHTML += "ファイル名 :" + f.name + "ファイルの型:" + f.type + "ファイルサイズ:" + f.size / 1000 + " KB " + "<br />";
+                }
+                // （3）ブラウザ上でファイルを展開する挙動を抑止
+                event.preventDefault();
+            }
+
+            function onDragOver(event) {
+                // （4）ブラウザ上でファイルを展開する挙動を抑止
+                event.preventDefault();
             }
         </script>
+
         <section id="main">
             <p>ドラッグアンドドロップで1つから複数のファイルのプロパティを取得します。</p>
-            <div id="drop" style="width:700px; height:150px; padding:10px; border:3px solid">ここにドロップしたファイルのプロパティを読み込みます。</div>
+            <div id="drop" style="width:700px; height:150px; padding:10px; border:3px solid" ondragover="onDragOver(event)" ondrop="onDrop(event)"  >ここにドロップしたファイルのプロパティを読み込みます。</div>
             <p>ファイルプロパティ表示</p>
-            <div id="disp"></div>
+            <div id="disp" ></div>
         </section>
     </body>
 </html>
