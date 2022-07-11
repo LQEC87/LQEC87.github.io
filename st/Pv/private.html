@@ -6,7 +6,8 @@
     </head>
     <body>
         <script type="text/javascript">
-            If (window.File) {
+            var Fapi = Boolean( window.File );
+            If (Fapi) {
                 window.alert("You can use FileAPI.");
             } else {
                 window.alert("it can't use FileAPI on this browser.");
