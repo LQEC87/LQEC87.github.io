@@ -1,0 +1,22 @@
+<!Doctype html>
+<html la="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>Private</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            If(window.File){
+                window.alert("You can use FileAPI.");
+            } else {
+                window.alert("it can't use FileAPI on this browser.");
+            }
+        </script>
+        <section id="main">
+            <p>ドラッグアンドドロップで1つから複数のファイルのプロパティを取得します。</p>
+            <div id="drop" style="width:700px; height:150px; padding:10px; border:3px solid">ここにドロップしたファイルのプロパティを読み込みます。</div>
+            <p>ファイルプロパティ表示</p>
+            <div id="disp"></div>
+        </section>
+    </body>
+</html>
