@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "3L Authentification"
-AuthUserFile "/st/ps/.htpasswd"
-require valid-user
