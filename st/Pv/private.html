@@ -26,7 +26,7 @@
                 for (var i = 0; i < files.length; i++) {
                     var f = files[i];
                     // （2）ファイル名とサイズを表示
-                    disp.innerHTML += "ファイル名 :" + f.name + "ファイルの型:" + f.type + "ファイルサイズ:" + f.size / 1000 + " KB " + "<br />";
+                    disp.innerHTML += "ファイル名:" + f.name + "\nファイルの型:" + f.type + "\nファイルサイズ:" + f.size / 1024 + " KiB " + "\n";
                 }
                 // （3）ブラウザ上でファイルを展開する挙動を抑止
                 event.preventDefault();
