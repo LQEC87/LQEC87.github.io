@@ -1,0 +1,41 @@
+.scani{
+  opacity: 0;
+  transition: all .5s ease;
+}
+
+.scani.show {
+  opacity: 1;
+  transform: none;
+}
+
+.scani--lr {
+  transform: translate(-100px, 0);
+}
+
+.scani--rl {
+  transform: translate(100px, 0);
+}
+
+.scani--up {
+  transform: translate(0, 100px);
+}
+
+.scani--down {
+  transform: translate(0, -100px);
+}
+
+.scani--scaleUp {
+  transform: scale(.2);
+}
+
+.scani--scaleDown {
+  transform: scale(2.0);
+}
+
+.scani--rotateL {
+  transform: rotate(180deg);
+}
+
+.scani--rotateR {
+  transform: rotate(-180deg);
+}
