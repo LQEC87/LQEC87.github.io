@@ -29,23 +29,33 @@
           height:20px;
           width:20px;
         }
+        #ope {
+          width:auto;
+          height:80px;
+          background-color:#5ee;
+        }
     </style>
 </head>
 <body>
     <section>
         <div>
             <div style="display: flex; flex-direction: row; align-items: center;"><spam>size:</spam><input id="number" type="number" min="0" max="99999"><button id="number">✓</button></div>
-            <div style="display: flex; flex-direction: row; align-items: center;"><spam>color:</spam><input id="color" type="color" value="#55eeee"><button id="color">✓</button></div>
+            <div style="display: flex; flex-direction: row; align-items: center;"><spam>background-color:</spam><input id="color" type="color" value="#55eeee"><button id="color">✓</button></div>
         </div>
         <div id="ope">こ↑こ↓</div>
     </section>
     <script>
-        document.querySelector("button #number").onclick = function(){
-            document.getElementbyId("ope").style.height = document.querySelector("input #number").value
-            document.getElementbyId("ope").style.width = document.querySelector("input #number").value
+        var Bnumber = document.querySelector("button #number");
+        var Bcolour = document.querySelector("button #color");
+        var operation = document.getElementbyId("ope");
+        var num = document.querySelector("input #number");
+        var col = document.querySelector("input #color");
+        Bnumber.onclick = function(){
+          operation.style.height = num.value
+          operation.style.width = num.value
         }
-        document.querySelector("button #color").onclick = function(){
-           document.getElementbyId("ope").style.color = document.querySelector("input #color").value
+        Bcolour.onclick = function(){
+          operation.style.backgroundColor = col.value
         }
     </script>
 <body>
