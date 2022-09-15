@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prougramming 2022/9/9</title>
+    <style>
+        body {
+          margin: 0;
+          height: 100%;
+        }
+
+        section {
+          background: #fff;
+          height: 100%;
+          padding: 100px;
+          box-sizing: border-box;
+        }
+        
+        spam{
+          font-size:25px;
+          color: black;
+        }
+        input{
+          height:30px;
+          width:200px;
+        }
+        button{
+          height:20px;
+          width:20px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div>
+            <div style="display: flex; flex-direction: row; align-items: center;"><spam>size:</spam><input id="number" type="number" min="0" max="99999"><button id="number">✓</button></div>
+            <div style="display: flex; flex-direction: row; align-items: center;"><spam>color:</spam><input id="color" type="color" value="#55eeee"><button id="color">✓</button></div>
+        </div>
+        <div id="ope">こ↑こ↓</div>
+    </section>
+    <script>
+        document.querySelector("button #number").onclick = function(){
+            document.getElementbyId("ope").style.height = document.querySelector("input #number").value
+            document.getElementbyId("ope").style.width = document.querySelector("input #number").value
+        }
+        document.querySelector("button #color").onclick = function(){
+           document.getElementbyId("ope").style.color = document.querySelector("input #color").value
+        }
+    </script>
+<body>
+</html>
