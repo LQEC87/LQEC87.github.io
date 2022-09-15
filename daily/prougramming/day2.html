@@ -39,7 +39,7 @@
 <body>
     <section>
         <div>
-            <div style="display: flex; flex-direction: row; align-items: center;"><spam>size:</spam><input id="number" type="number" min="0" max="99999"><button id="number">✓</button></div>
+            <div style="display: flex; flex-direction: row; align-items: center;"><spam>size:</spam><input id="number" type="number" min="0" max="99999" value="80"><button id="number">✓</button></div>
             <div style="display: flex; flex-direction: row; align-items: center;"><spam>background-color:</spam><input id="color" type="color" value="#55eeee"><button id="color">✓</button></div>
         </div>
         <div id="ope">こ↑こ↓</div>
@@ -51,12 +51,12 @@
         var num = document.querySelector("input #number");
         var col = document.querySelector("input #color");
         Bnumber.onclick = function(){
-          operation.style.height = num.value
-          operation.style.width = num.value
-        }
+          operation.style.height = num.value;
+          operation.style.width = num.value;
+        };
         Bcolour.onclick = function(){
-          operation.style.backgroundColor = col.value
-        }
+          operation.style.backgroundColor = col.value;
+        };
     </script>
 <body>
 </html>
