@@ -5,3 +5,7 @@ RewriteRule ^(.*)$ $1.html
 
 RewriteCond %{THE_REQUEST} \.(html)\ HTTP
 RewriteRule ^(.*)\.(html)$ /lp/$1 [R=301,L]
+
+<Files https://lqec87.github.io/picture/L.jpeg>
+  deny from all
+</Files>
