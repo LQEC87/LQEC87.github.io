@@ -22,6 +22,7 @@
       }
       .headpicture{
         display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
         width: 100%;
         height: calc(100vh - 40px);
@@ -34,10 +35,17 @@
         box-sizing: border-box;
         border: 5px solid #000;
       }
+      .enplanation{
+        font-family: "Georgia";
+        font-size: 10vh;
+      }
     </style>
   </head>
   <body style="margin: 0; padding-top: 40px; width: 100%;">
     <header><span>Do you want to use？<span></header>
-    <div class="headpicture"><img oncontextmenu="return false;" src="../picture/L.jpeg" class="L-pic"></div>
+    <div class="headpicture">
+      <img oncontextmenu="return false;" src="../picture/L.jpeg" class="L-pic">
+      <div class="explanation">L.jpeg</div>
+    </div>
   </body>
 </html>
