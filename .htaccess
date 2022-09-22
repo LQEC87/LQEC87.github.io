@@ -6,6 +6,7 @@ RewriteRule ^(.*)$ $1.html
 RewriteCond %{THE_REQUEST} \.(html)\ HTTP
 RewriteRule ^(.*)\.(html)$ /lp/$1 [R=301,L]
 
-<Files https://lqec87.github.io/picture/L.jpeg>
-  deny from all
-</Files>
+# 条件：直リンク許可サイト以外からアクセス
+RewriteCond %{HTTP_REFERER} !^http(s)?://lqec87.github.io [NC]
+# 処理：直リンク禁止ファイルアクセス時にエラーを返す
+RewriteRule \.(jpg|jpeg|png|gif|webp|js|css)$ - [F]
