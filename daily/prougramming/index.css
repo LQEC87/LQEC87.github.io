@@ -31,3 +31,8 @@ section {
 .scani--lr {
   transform: translate(-100px, 0);
 }
+
+footer{
+  height: 200px;
+  background-color: darkgreen;
+}
