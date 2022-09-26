@@ -11,12 +11,12 @@ window.addEventListener('scroll', scrollAnimationFunc);
 
 
 
-var Fapi = Boolean(window.File);
-if (Fapi) {
-  var fileInfomationFunc = function(){
-    var files = import("https://LQEC87.github.io/daily/prougramming/day1.html");
-    const info = document.querySelector('#day1 #info');
-    info.textContent = "FileName:" + files.name + "<br />FileType:" + files.type + "FileSize:" + files.size + " Byte<br />";
-  }
-  window.addEventListener('load', fileInfomationFunc);
-}
+//**var Fapi = Boolean(window.File);
+//if (Fapi) {
+//  var fileInfomationFunc = function(){
+//    var files = import("https://LQEC87.github.io/daily/prougramming/day1.html");
+//    const info = document.querySelector('#day1 #info');
+//    info.textContent = "FileName:" + files.name + "<br />FileType:" + files.type + "FileSize:" + files.size + " Byte<br />";
+//  }
+//  window.addEventListener('load', fileInfomationFunc);
+//}
