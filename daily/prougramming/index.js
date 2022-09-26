@@ -1,4 +1,4 @@
-var Fapi = Boolern(window.File)
+var Fapi = Boolern(window.File);
 if (Fapi) {
   var fileInfomationFunc = function(){
     var files = import("https://LQEC87.github.io/daily/prougramming/day1.html");
