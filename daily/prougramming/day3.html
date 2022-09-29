@@ -5,6 +5,9 @@
   <meta charset="utf-8" />
   <title>sample</title>
   <style>
+    body{
+      user-select: none;
+    }
     .clock{
       font-size: 20px;
     }
@@ -29,12 +32,20 @@
       document.getElementById("realtime").innerHTML = msg;
     }
     setInterval('showClock()',1000);
+    var countnumer = 0;
+    function countup() {
+      countnumber += 1;
+      document.getElementById("milisecond").innerHTML = countnumber + "ms";
+    }
+    setInterval('countup()',10);
   </script>
 </head>
 
 <body>
 
   <div class="clock" id="realtime"></div>
+  <div style="width: 400px;"></div>
+  <div id="milisecond"></div>
 
 </body>
 
