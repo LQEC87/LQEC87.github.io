@@ -5,7 +5,11 @@
   <meta charset="utf-8" />
   <title>sample</title>
   <style>
-
+    .clock{
+      font-size: 20px;
+    }
+    .number{ font-size: 70px; }
+    .symbol{ font-size: 5px; }
   </style>
   <script>
     function twoDigit(num) {
@@ -21,7 +25,7 @@
       let nowHour = twoDigit( nowTime.getHours() );
       let nowMin  = twoDigit( nowTime.getMinutes() );
       let nowSec  = twoDigit( nowTime.getSeconds() );
-      let msg = "現在時刻：" + nowHour + ":" + nowMin + ":" + nowSec;
+      let msg = "現在時刻　<span class='number'>" + nowHour + "<span class='symbol'>時</span>" + nowMin + "<span class='symbol'>分</span>" + nowSec + "<span class='symbol'>秒</span></span>";
       document.getElementById("realtime").innerHTML = msg;
     }
     setInterval('showClock()',1000);
@@ -30,7 +34,7 @@
 
 <body>
 
-  <p id="realtime"></p>
+  <div class="clock" id="realtime"></div>
 
 </body>
 
