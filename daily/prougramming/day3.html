@@ -1,52 +1,68 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <meta charset="utf-8" />
-  <title>sample</title>
-  <style>
-    body{
-      user-select: none;
-    }
-    .clock{
-      font-size: 20px;
-    }
-    .number{ font-size: 70px; }
-    .symbol{ font-size: 5px; }
-  </style>
-  <script>
-    function twoDigit(num) {
-      let ret;
-      if( num < 10 ) 
-        ret = "0" + num; 
-      else 
-        ret = num; 
-      return ret;
-    }
-    function showClock() {
-      let nowTime = new Date();
-      let nowHour = twoDigit( nowTime.getHours() );
-      let nowMin  = twoDigit( nowTime.getMinutes() );
-      let nowSec  = twoDigit( nowTime.getSeconds() );
-      let msg = "現在時刻　<span class='number'>" + nowHour + "<span class='symbol'>時</span>" + nowMin + "<span class='symbol'>分</span>" + nowSec + "<span class='symbol'>秒</span></span>";
-      document.getElementById("realtime").innerHTML = msg;
-    }
-    setInterval('showClock()',1000);
-    var countnumber = 0;
-    function countup() {
-      countnumber += 1;
-      document.getElementById("milisecond").innerHTML = countnumber + "ms";
-    }
-    setInterval('countup()',10);
-  </script>
-</head>
-
-<body>
-
-  <div class="clock" id="realtime"></div>
-  <div style="width: 400px;"></div>
-  <div id="milisecond"></div>
-
-</body>
-
+  <head>
+    <meta charset="utf-8" />
+    <title>sample</title>
+    <style>
+      body{
+        margin: 0;
+        padding-top: 90px;
+      }
+      header{
+        position: fixed;
+        top: 0;
+        display: flex;
+        flex-direction: row;
+        border-bottom: 2px double #bbddff;
+        height: 90px;
+        user-select: none;
+      }
+      .clock{
+        font-size: 20px;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      .elapsed{
+        font-size: 20px;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .number{ font-size: 70px; }
+      .symbol{ font-size: 5px; }
+    </style>
+    <script>
+      function twoDigit(num) {
+        let ret;
+        if( num < 10 ) 
+          ret = "0" + num; 
+        else 
+          ret = num; 
+        return ret;
+      }
+      function showClock() {
+        let nowTime = new Date();
+        let nowHour = twoDigit( nowTime.getHours() );
+        let nowMin  = twoDigit( nowTime.getMinutes() );
+        let nowSec  = twoDigit( nowTime.getSeconds() );
+        let msg = "現在時刻　<span class='number'>" + nowHour + "<span class='symbol'>時</span>" + nowMin + "<span class='symbol'>分</span>" + nowSec + "<span class='symbol'>秒</span></span>";
+        document.getElementById("realtime").innerHTML = msg;
+      }
+      setInterval('showClock()',1000);
+      var countnumber = 0;
+      function elapsed() {
+        countnumber += 1;
+        document.getElementById("milisecond").innerHTML = "経過時間　<span class='number'>" + countnumber + "</span><span class='symbol'>ms</span>";
+      }
+      setInterval('elapsed()',1);
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="clock" id="realtime"></div>
+      <div style="width: "></div>
+      <div class="elapsed" id="milisecond"></div>
+    </header>
+  </body>
 </html>
