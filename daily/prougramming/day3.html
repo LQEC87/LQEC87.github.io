@@ -37,7 +37,7 @@
       .number{ font-size: 70px; }
       .symbol{ font-size: 5px; }
     </style>
-    <script>
+    <script defer>
       function twoDigit(num) {
         let ret;
         if( num < 10 ) 
@@ -54,7 +54,7 @@
         let msg = "現在時刻　<span class='number'>" + nowHour + "<span class='symbol'>時</span>" + nowMin + "<span class='symbol'>分</span>" + nowSec + "<span class='symbol'>秒</span></span>";
         document.getElementById("realtime").innerHTML = msg;
       }
-      document.getElementById("realtime").onload = showClock();
+      window.onload = showClock();
       setInterval('showClock()',1000);
       var countnumber = 0;
       function elapsed() {
