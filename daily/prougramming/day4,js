@@ -18,7 +18,7 @@ function isPrime(value) {
 }
 
 function setup() {
-  createCanvas(500, 500);
+  createCanvas(1000, 1000);
   background(0);
   
   const cols = width / stepSize;
@@ -34,14 +34,14 @@ function setup() {
 function draw() {
   //textSize(stepSize);
   //textAlign(CENTER,CENTER);
-  fill(255);
+  //fill(255);
   stroke(255);
   if(isPrime(step)){
-    circle(x, y, stepSize*0.5);
+    square(x, y, stepSize);
   }
-  line(x,y,px,py);
-  px = x;
-  py = y;
+  //line(x,y,px,py);
+  //px = x;
+  //py = y;
   switch (state){
     case 0:
       x += stepSize;
@@ -54,6 +54,7 @@ function draw() {
       break;
     case 3:
       y += stepSize;
+      break;
   }
   if (step % numStep == 0){
     state = (state+1)%4;
