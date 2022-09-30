@@ -71,3 +71,8 @@ function draw() {
   
   //frameRate();
 }
+
+function stepGauge(){
+  document.getElementById("steps").innerHTML = "STEPS: " + step;
+}
+setInterval("stepGauge()",20);
