@@ -10,6 +10,10 @@ window.addEventListener('load', scrollAnimationFunc);
 window.addEventListener('scroll', scrollAnimationFunc);
 
 
+document.querySelectorAll('select #main').onclick = function() {
+  window.location.href = this.parentElement.id;
+}
+
 
 //**var Fapi = Boolean(window.File);
 //if (Fapi) {
