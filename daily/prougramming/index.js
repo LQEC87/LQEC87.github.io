@@ -10,7 +10,8 @@ window.addEventListener('load', scrollAnimationFunc);
 window.addEventListener('scroll', scrollAnimationFunc);
 
 
-document.querySelectorAll('section #main').onclick = function() {
+const mainner = document.querySelectorAll('section #main');
+mainner.onclick = function() {
   window.location.href = this.parentElement.id;
 }
 
