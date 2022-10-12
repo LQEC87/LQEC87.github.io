@@ -9,12 +9,12 @@ var scrollAnimationFunc = function() {
 window.addEventListener('load', scrollAnimationFunc);
 window.addEventListener('scroll', scrollAnimationFunc);
 
-
+/*
 const mainner = document.querySelectorAll('section .main');
 mainner.onclick = function() {
   window.location.href = this.parentElement.id;
 }
-
+*/
 
 /*var Fapi = Boolean(window.File);
 if (Fapi) {
