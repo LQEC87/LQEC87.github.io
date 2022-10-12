@@ -1,7 +1,7 @@
 var scrollAnimationElm = document.querySelectorAll('.scani');
 var scrollAnimationFunc = function() {
   for(var i = 0; i < scrollAnimationElm.length; i++) {
-    if (window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + 300) {
+    if (window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + 100) {
       scrollAnimationElm[i].classList.add('show');
     }
   }
