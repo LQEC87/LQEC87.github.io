@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Programing archives - download</title>
+        <style>
+            body{
+                margin: 0;
+            }
+            header{
+                margin: 0;
+                width: 100%;
+                height: 35vh;
+                background-color: #999900;
+                font-size: 30vh;
+            }
+            section{
+                margin:　0;
+                border-left-width: 5cm;
+            }
+        </style>
+    </head>
+    <body>
+        <header>downloader</header>
+        <section>
+            <div style="font-size: x-large;"><a href="day2.zip" download="Prougramming_2022_9_9.zip">download all in a once</a></div>
+            <div><a href="../day2.html" download="Prougramming_2022_9_9.html">download html</a></div>
+            <div><a href="../day2.css" download="Prougramming_2022_9_9.css">download css</a></div>
+            <div><a href="../day2.js" download="Prougramming_2022_9_9.js">download js</a></div>
+        </section>
+    </body>
+</html>
