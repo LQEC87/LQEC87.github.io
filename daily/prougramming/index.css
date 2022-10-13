@@ -5,7 +5,7 @@ body {
 
 header {
   height: 700px;
-  padding: 100px;
+  padding-left: 100px;
   box-sizing: border-box;
   background-color: #1dd;
 }
