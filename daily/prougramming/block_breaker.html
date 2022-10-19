@@ -16,7 +16,7 @@
   const canvas = document.getElementById("myCanvas");
   const ctx = canvas.getContext("2d");
   
-  ctx.beginPath();
+  /*ctx.beginPath();
   ctx.rect(20, 40, 50, 50);
   ctx.fillStyle = "#FF0000";
   ctx.fill();
@@ -32,7 +32,7 @@
   ctx.rect(160, 10, 100, 40);
   ctx.strokeStyle = "rgba(0, 0, 255, 0.5)";
   ctx.stroke();
-  ctx.closePath();
+  ctx.closePath();*/
   
   let x = canvas.width / 2;
   let y = canvas.height - 30;
@@ -51,6 +51,7 @@
     ctx.closePath();
     x += dx;
     y += dy;
+    dy -= 0.05;
   }
   setInterval(draw,1000/frameRate);
 
