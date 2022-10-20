@@ -44,8 +44,16 @@
   let paddleX = (canvas.width - paddleWidth) / 2;
   let rightPressed = false;
   let leftPressed = false;
+  const brickRowCount = 3;
+  const brickColumnCount = 5;
+  const brickWidth = 75;
+  const brickHeight = 20;
+  const brickPadding = 10;
+  const brickOffsetTop = 30;
+  const brickOffsetLeft = 30;
   
   var frameRate = 100;
+  let collision = false;
   
   document.addEventListener("keydown", keyDownHandler, false);
   document.addEventListener("keyup", keyUpHandler, false);
@@ -88,28 +96,45 @@
     y += dy;
     if (x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
       dx = -dx;
+      collision = true;
     } else if (x + dx > paddleX-ballRadius && y > canvas.height-paddleHeight-ballRadius) {
       dx = -dx;
+      collision = true;
     } else if (x + dx < paddleX+paddleWidth+ballRadius && y > canvas.height-paddleHeight-ballRadius) {
       dx = -dx;
+      collision = true;
     }
     if (y + dy < ballRadius) {
       dy = -dy;
+      collision = true;
     } else if (y + dy > canvas.height-paddleHeight-ballRadius && x > paddleX && x < paddleX + paddleWidth) {
       dy = -dy;
+      collision = true;
     } else if (y + dy > canvas.height-ballRadius) {
       if (x-ballRadius > paddleX && x < paddleX + paddleWidth) {
         dy = -dy;
+        collision = true;
+      } else if (y >= canvas.height-ballRadius/2) {
+        alert("GAME OVER");
+        document.location.reload();
+        clearInterval(interval);
       } else {
         alert("GAME OVER");
         document.location.reload();
         clearInterval(interval);
       }
     }
+    if (collision) {
+      dx = Math.round(dx);
+      dy = Math.round(dy);
+      dx = dx + ( Math.round( ( Math.random()-0.5 )*10 )/10 );
+      dy = dy + ( Math.round( ( Math.random()-0.5 )*10 )/10 );
+      collision = false;
+    }
     if (rightPressed) {
-      paddleX = Math.min(paddleX + 7, canvas.width - paddleWidth);
+      paddleX = Math.min(paddleX + 5, canvas.width - paddleWidth);
     } else if (leftPressed) {
-      paddleX = Math.max(paddleX - 7, 0);
+      paddleX = Math.max(paddleX - 5, 0);
     }
   }
   const interval = setInterval(draw, 10);
