@@ -88,6 +88,11 @@
     ctx.fill();
     ctx.closePath();
   }
+  function gameover() {
+    alert("GAME OVER");
+    document.location.reload();
+    clearInterval(interval);
+  }
 
   function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -110,13 +115,12 @@
       if (x-ballRadius > paddleX && x < paddleX + paddleWidth) {
         collisionY = true;
       } else if (y >= canvas.height-ballRadius/1.5) {
-        alert("GAME OVER");
-        document.location.reload();
-        clearInterval(interval);
+        gameover();
       } else {
-        alert("GAME OVER");
-        document.location.reload();
-        clearInterval(interval);
+        gameover();
+      }
+      if (y > canvas.height-paddleHeight) {
+        gameover();
       }
     }
     if (collisionX) {
