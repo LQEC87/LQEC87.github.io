@@ -103,6 +103,8 @@
     drawPaddle();
     x += dx;
     y += dy;
+    x = Math.round(x);
+    y = Math.round(y);
     if (x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
       collisionX = true;
     } else if (x + dx > paddleX-ballRadius && y > canvas.height-paddleHeight-ballRadius) {
