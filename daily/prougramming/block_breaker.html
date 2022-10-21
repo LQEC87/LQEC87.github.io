@@ -128,7 +128,7 @@
       dx = Math.sign(dx) *2;
       dy = Math.sign(dy) *2;
       dx = dx + ( Math.round( ( Math.random()-0.5 )*10 )/10 );
-      dy = Math.round( Math.sqrt(8-dx**2)*10 )/10;
+      dy = dy + ( Math.round( ( Math.random()-0.5 )*10 )/10 );
       collision = false;
     }
     if (rightPressed) {
