@@ -53,7 +53,8 @@
   const brickOffsetLeft = 30;
   
   var frameRate = 100;
-  let collision = false;
+  let collisionX = false;
+  let collisionY = false;
   
   document.addEventListener("keydown", keyDownHandler, false);
   document.addEventListener("keyup", keyUpHandler, false);
@@ -95,25 +96,19 @@
     x += dx;
     y += dy;
     if (x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
-      dx = -dx;
-      collision = true;
+      collisionX = true;
     } else if (x + dx > paddleX-ballRadius && y > canvas.height-paddleHeight-ballRadius) {
-      dx = -dx;
-      collision = true;
+      collisionX = true;
     } else if (x + dx < paddleX+paddleWidth+ballRadius && y > canvas.height-paddleHeight-ballRadius) {
-      dx = -dx;
-      collision = true;
+      collisionX = true;
     }
     if (y + dy < ballRadius) {
-      dy = -dy;
-      collision = true;
+      collisionY = true;
     } else if (y + dy > canvas.height-paddleHeight-ballRadius && x > paddleX && x < paddleX + paddleWidth) {
-      dy = -dy;
-      collision = true;
+      collisionY = true;
     } else if (y + dy > canvas.height-ballRadius) {
       if (x-ballRadius > paddleX && x < paddleX + paddleWidth) {
-        dy = -dy;
-        collision = true;
+        collisionY = true;
       } else if (y >= canvas.height-ballRadius/2) {
         alert("GAME OVER");
         document.location.reload();
@@ -124,12 +119,16 @@
         clearInterval(interval);
       }
     }
-    if (collision) {
-      dx = Math.sign(dx) *2;
-      dy = Math.sign(dy) *2;
+    if (collisionX) {
+      dx = Math.sign(-dx) *2;
       dx = dx + ( Math.round( ( Math.random()-0.5 )*10 )/10 );
+      dy = Math.sign(dy) * Math.round( Math.sqrt( 8 - (Math.abs(dx)**2) )*10 )/10;
+      collisionX = false;
+    } else if (collisionY) {
+      dy = Math.sign(-dy) *2;
       dy = dy + ( Math.round( ( Math.random()-0.5 )*10 )/10 );
-      collision = false;
+      dx = Math.sign(dx) * Math.round( Math.sqrt( 8 - (Math.abs(dy)**2) )*10 )/10;
+      collisionY = false;
     }
     if (rightPressed) {
       paddleX = Math.min(paddleX + 5, canvas.width - paddleWidth);
