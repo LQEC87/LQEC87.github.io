@@ -109,7 +109,7 @@
     } else if (y + dy > canvas.height-ballRadius) {
       if (x-ballRadius > paddleX && x < paddleX + paddleWidth) {
         collisionY = true;
-      } else if (y >= canvas.height-ballRadius/2) {
+      } else if (y >= canvas.height-ballRadius/1.5) {
         alert("GAME OVER");
         document.location.reload();
         clearInterval(interval);
