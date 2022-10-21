@@ -113,16 +113,17 @@
     if (y + dy < ballRadius) {
       collisionY = true;
     } else if (y + dy > canvas.height-paddleHeight-ballRadius && x > paddleX && x < paddleX + paddleWidth) {
-      collisionY = true;
+      if (y > canvas.height-paddleHeight) {
+        gameover();
+      } else {
+        collisionY = true;
+      }
     } else if (y + dy > canvas.height-ballRadius) {
       if (x-ballRadius > paddleX && x < paddleX + paddleWidth) {
         collisionY = true;
       } else if (y >= canvas.height-ballRadius/1.5) {
         gameover();
       } else {
-        gameover();
-      }
-      if (y > canvas.height-paddleHeight) {
         gameover();
       }
     }
