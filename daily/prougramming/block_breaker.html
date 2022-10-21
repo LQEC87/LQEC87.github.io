@@ -11,10 +11,13 @@
 <body>
 
 <canvas id="myCanvas" width="480" height="320"></canvas>
-
+<div id="display"></div>
+  
 <script>
   const canvas = document.getElementById("myCanvas");
   const ctx = canvas.getContext("2d");
+  
+  const disp = document.getElementById("display");
   
   /*ctx.beginPath();
   ctx.rect(20, 40, 50, 50);
@@ -139,6 +142,7 @@
     } else if (leftPressed) {
       paddleX = Math.max(paddleX - 5, 0);
     }
+    disp.innerHTML = x + " " + y + " " + dx + " " + dy
   }
   const interval = setInterval(draw, 10);
 
