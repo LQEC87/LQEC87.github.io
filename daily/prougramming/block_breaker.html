@@ -68,6 +68,7 @@
   var frameRate = 100;
   let collisionX = false;
   let collisionY = false;
+  let ballSpeed = 8;
   
   document.addEventListener("keydown", keyDownHandler, false);
   document.addEventListener("keyup", keyUpHandler, false);
@@ -105,6 +106,7 @@
             collisionY = true;
             b.status = 0;
             score++;
+            ballSpeed += 0.5;
             if (score === brickRowCount * brickColumnCount) {
               alert("YOU WIN, CONGRATULATIONS!");
               document.location.reload();
@@ -208,12 +210,12 @@
     if (collisionX) {
       dx = Math.sign(-dx) *2;
       dx = dx + ( Math.round( ( Math.random()-0.5 )*10 )/10 );
-      dy = Math.sign(dy) * Math.round( Math.sqrt( 8 - (Math.abs(dx)**2) )*10 )/10;
+      dy = Math.sign(dy) * Math.round( Math.sqrt( ballSpeed - (Math.abs(dx)**2) )*10 )/10;
       collisionX = false;
     } else if (collisionY) {
       dy = Math.sign(-dy) *2;
       dy = dy + ( Math.round( ( Math.random()-0.5 )*10 )/10 );
-      dx = Math.sign(dx) * Math.round( Math.sqrt( 8 - (Math.abs(dy)**2) )*10 )/10;
+      dx = Math.sign(dx) * Math.round( Math.sqrt( ballSpeed - (Math.abs(dy)**2) )*10 )/10;
       collisionY = false;
     }
     if (rightPressed) {
