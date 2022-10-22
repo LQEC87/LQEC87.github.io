@@ -70,6 +70,7 @@
   let collisionY = false;
   let ballSpeed = 8;
   let speedUp = 3;
+  let accelerate = 0.05;
   
   document.addEventListener("keydown", keyDownHandler, false);
   document.addEventListener("keyup", keyUpHandler, false);
@@ -107,7 +108,7 @@
             b.status = 0;
             score++;
             ballSpeed += speedUp;
-            speedUp += 0.05;
+            speedUp += accelerate;
             if (score === brickRowCount * brickColumnCount) {
               alert("YOU WIN, CONGRATULATIONS!");
               document.location.reload();
