@@ -211,14 +211,16 @@
       }
     }
     if (collisionX) {
-      dx = Math.sign(-dx) *2;
+      /*dx = Math.sign(-dx) *2;
       dx = dx + ( Math.round( ( Math.random()-0.5 )*10 )/10 );
-      dy = Math.sign(dy) * Math.round( Math.sqrt( ballSpeed - (Math.abs(dx)**2) )*10 )/10;
+      dy = Math.sign(dy) * Math.round( Math.sqrt( ballSpeed - (Math.abs(dx)**2) )*10 )/10;*/
+      dx = -dx
       collisionX = false;
     } else if (collisionY) {
-      dy = Math.sign(-dy) *2;
+      /*dy = Math.sign(-dy) *2;
       dy = dy + ( Math.round( ( Math.random()-0.5 )*10 )/10 );
-      dx = Math.sign(dx) * Math.round( Math.sqrt( ballSpeed - (Math.abs(dy)**2) )*10 )/10;
+      dx = Math.sign(dx) * Math.round( Math.sqrt( ballSpeed - (Math.abs(dy)**2) )*10 )/10;*/
+      dy = -dy;
       collisionY = false;
     }
     if (rightPressed) {
