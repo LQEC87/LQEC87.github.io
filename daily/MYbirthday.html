@@ -7,33 +7,60 @@
         margin: 0;
         background-color: #ffffff;
       }
-      .text{
-        margin-top: -10vh;
-        width: 100%;
-        height: 100%;
-        font-size: 10vh;
-        text-align: center;
-        font-family: serif;
+      @media screen and (min-width: 1000px) {
+        .text{
+          margin-top: -10vh;
+          width: 100%;
+          height: 100%;
+          font-size: 10vh;
+          text-align: center;
+          font-family: serif;
+        }
+        .rainbow {
+          background: linear-gradient(to right,#e60000,#f39800,#fff100,#009944,#0068b7,#1d2088,#920783,#e60000) 0/200%;
+          font-size: 70vh;
+          font-family: cursive;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          animation: .5s rainbowed linear infinite;
+        }
+        .birth{
+          margin-top: -5vh;
+          font-style: italic;
+          font-family: "Times New Roman";
+        }
+        @keyframes rainbowed {
+          100% {background-position: 200%;}
+        }
       }
-      .rainbow {
-        background: linear-gradient(to right,#e60000,#f39800,#fff100,#009944,#0068b7,#1d2088,#920783,#e60000) 0/200%;
-        font-size: 70vh;
-        font-family: cursive;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation: .5s rainbowed linear infinite;
-      }
-      .birth{
-        margin-top: -5vh;
-        font-style: italic;
-        font-family: "Times New Roman";
-      }
-      @keyframes rainbowed {
-        100% {background-position: 200%;}
+      @media screen and (max-width: 1000px) {
+        b.text{
+          width: 100%;
+          height: 100%;
+          font-size: 10vh;
+          text-align: center;
+          font-family: serif;
+        }
+        .rainbow {
+          background: linear-gradient(to right,#e60000,#f39800,#fff100,#009944,#0068b7,#1d2088,#920783,#e60000) 0/200%;
+          font-size: 50vw;
+          font-family: cursive;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          animation: .5s rainbowed linear infinite;
+        }
+        .birth{
+          margin-top: -5vh;
+          font-style: italic;
+          font-family: "Times New Roman";
+        }
+        @keyframes rainbowed {
+          100% {background-position: 200%;}
+        }
       }
     </style>
   </head>
   <body>
-    <div class="text">It's <span class="rainbow">MY</span><br><span style="font-style:italic; margin-top: -5vh;">birthday!!!!</span></div>
+    <div class="text">It's <span class="rainbow">MY</span><br><span class="birth">birthday!!!!</span></div>
   </body>
 </html>
