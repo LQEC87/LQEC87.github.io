@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <tytle>it's MY birthday!!!</title>
+    <style>
+      body {
+        margin: 0;
+        background-color: #ffffff;
+      }
+      .text{
+        width: 100%;
+        height: 100%;
+        font-size: 25vh;
+        text-align: center;
+      }
+      .rainbow {
+        background: linear-gradient(to right,#e60000,#f39800,#fff100,#009944,#0068b7,#1d2088,#920783,#e60000) 0 / 200%;
+        font-size: 50vh;
+        -webkit-background-clip: text;
+        -webkit-text-full-color: transparent;
+        animation: 5s rainbowed linear infinite;
+      }
+      @keyframes rainbowed {
+        100% {background-position: 200%;}
+      }
+    </style>
+  </head>
+  <body>
+    <div class="text">It's <span class="rainbow">MY</span><br><span style="font-style:italic;">birthday</span>!!!!</div>
+  </body>
+</html>
