@@ -55,10 +55,15 @@
         document.getElementById("realtime").innerHTML = msg;
       }
       setInterval('showClock()',1000);
+      var bitnumber = 0;
+      function bittime() {
+        if (bitnumber = 9) { bitnumber = 0; } else { bitnumber += 1; }
+      }
+      setInterval('bittime()',1);
       var countnumber = 0;
       function elapsed() {
         countnumber += 1;
-        document.getElementById("milisecond").innerHTML = "経過時間　<span class='number'>" + countnumber + "0</span><span class='symbol'>ms</span>";
+        document.getElementById("milisecond").innerHTML = "経過時間　<span class='number'>" + countnumber + bitnumber + "</span><span class='symbol'>ms</span>";
       }
       setInterval('elapsed()',10);
     </script>
