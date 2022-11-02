@@ -63,7 +63,7 @@
       var countnumber = 0;
       function elapsed() {
         countnumber += 1;
-        document.getElementById("milisecond").innerHTML = "経過時間　<span class='number'>" + countnumber + bitnumber.substr(-1) + "</span><span class='symbol'>ms</span>";
+        document.getElementById("milisecond").innerHTML = "経過時間　<span class='number'>" + countnumber + bitnumber.toString().substr(-1) + "</span><span class='symbol'>ms</span>";
       }
       setInterval('elapsed()',10);
       function disp() { document.getElementById("disp").innerHTML = bitnumber; }
