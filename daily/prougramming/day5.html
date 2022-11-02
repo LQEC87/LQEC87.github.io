@@ -54,7 +54,7 @@
         let msg = "現在時刻　<span class='number'>" + nowHour + "<span class='symbol'>時</span>" + nowMin + "<span class='symbol'>分</span>" + nowSec + "<span class='symbol'>秒</span></span>";
         document.getElementById("realtime").innerHTML = msg;
       }
-      setInterval('showClock()',1000);
+      setInterval('showClock()',100);
       var bitnumber = 0;
       function bittime() {
         bitnumber += 1;
@@ -67,7 +67,17 @@
         document.getElementById("milisecond").innerHTML = "経過時間　<span class='number'>" + countnumber + bitnumber + "</span><span class='symbol'>ms</span>";
       }
       setInterval('elapsed()',10);
-      function disp() { document.getElementById("disp").innerHTML = bitnumber; }
+      
+      var counter = 0;
+      function count() {
+        counter+=1;
+      }
+      function increases() {
+        setInterval('count()',1000);
+      }
+      setInterval('increases()',1000);
+      
+      function disp() { document.getElementById("disp").innerHTML = bitnumber + " " + counter; }
       setInterval('disp()',1);
     </script>
   </head>
