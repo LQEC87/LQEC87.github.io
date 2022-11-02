@@ -58,6 +58,7 @@
       var bitnumber = 0;
       function bittime() {
         bitnumber += 1;
+        if (bitnumber==10) { bitnumber = 0; }
       }
       setInterval('bittime()',1);
       var countnumber = 0;
