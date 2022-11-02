@@ -58,9 +58,9 @@
       var countnumber = 0;
       function elapsed() {
         countnumber += 1;
-        document.getElementById("milisecond").innerHTML = "経過時間　<span class='number'>" + countnumber + "</span><span class='symbol'>ms</span>";
+        document.getElementById("milisecond").innerHTML = "処理回数　<span class='number'>" + countnumber + "</span><span class='symbol'>回</span>";
       }
-      setInterval('elapsed()',1);
+      setInterval('elapsed()',0.1);
     </script>
   </head>
   <body>
