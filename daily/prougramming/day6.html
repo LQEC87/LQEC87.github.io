@@ -55,13 +55,14 @@
         document.getElementById("realtime").innerHTML = msg;
       }
       //setInterval('showClock()',100);
+      const sleep = (ms) => {new Promise( (resolve) => { setTimeout(resolve,ms); } )};
       function startClock() {
         showClock();
         let setTime = new Date().getSeconds();
         let differ = setTime;
         while (true) {
           if ( setTime != differ ) {
-            setTimeout('',10);
+            await sleep(10);
             setInterval('showClock()',1000);
             return;
           } else {
