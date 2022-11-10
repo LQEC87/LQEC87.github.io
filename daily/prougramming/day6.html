@@ -72,12 +72,18 @@
       }
       setTimeout('startClock()',100);
       
+      /*
       var bitnumber = 0;
+      var countuptime = 0;
       function bittime() {
         bitnumber += 1;
         if (bitnumber==10) { bitnumber = 0; }
       }
       setInterval('bittime()',1);
+      function countUpTimer() {
+        countuptime += 10;
+      }
+      
       var countnumber = 0;
       function elapsed() {
         countnumber += 1;
@@ -85,17 +91,26 @@
       }
       setInterval('elapsed()',10);
       
-      var counter = 0;
-      function count() {
-        counter+=1;
-      }
-      function increases() {
-        setInterval('count()',1000);
-      }
-      setInterval('increases()',1000);
+      function getElapsedtime() { return ( countnumber *10 ) + bitnumber; }
+      */
       
-      function disp() { document.getElementById("disp").innerHTML = bitnumber + " " + counter; }
-      setInterval('disp()',1);
+      var bitnum = 0;
+      var countnum = 0;
+      function bittime() {bitnum+=1;if(bitnum==10){bitnum=0;}}
+      setInterval('bittime()',1);
+      function elapsed() {countnum+=1;}
+      setInterval('elapsed()',10);
+      function getElapsedTime() { return bitnum+countnum*10; }
+      
+      function display() {
+        document.getElementById("milisecond").innerHTML = "経過時間　<span class='number'>" + getElapsedTime() + "</span><span class='symbol'>ms</span>";
+      }
+      setInterval('display()',10);
+      
+      function draw() {
+        document.getElementById("disp").innerHTML = bitnum + bitnum*10 + bitnum*100;
+      }
+      setInterval('draw()',1);
     </script>
   </head>
   <body>
