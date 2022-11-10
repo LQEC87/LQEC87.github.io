@@ -56,7 +56,7 @@
       }
       //setInterval('showClock()',100);
       const sleep = (ms) => {new Promise( (resolve) => { setTimeout(resolve,ms); } )};
-      function startClock() {
+      async function startClock() {
         showClock();
         let setTime = new Date().getSeconds();
         let differ = setTime;
