@@ -1,0 +1,42 @@
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+.word {
+    height: 50%;
+    width: 100%;
+    text-align: center;
+}
+
+.container {
+    height: 50%;
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+}
+
+.key_container {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.key {
+    height: 50px;
+    width: 50px;
+    margin-right: 20px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 50px;
+    background-color: lightsalmon;
+    border-radius: 5px;
+}
+
+.keyPress {
+    background-color: saddlebrown;
+}
