@@ -1,18 +1,41 @@
 body {
+    margin: 0;
     height: 100vh;
     width: 100vw;
 }
 
-.word {
-    height: 50%;
-    width: 100%;
+.wordy {
+    height: 100%;
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.TPS {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    height: 100%;
+    width: 5%;
+    font-size: small;
+}
+
+.text {
     text-align: center;
+    font-size: 30px;
+}
+
+.colored {
+    color: #b20;
 }
 
 .container {
+    margin: 0;
+    padding: 0;
     height: 50%;
     width: 100%;
-    padding: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,6 +58,11 @@ body {
     line-height: 50px;
     background-color: lightsalmon;
     border-radius: 5px;
+}
+
+.F,
+.J {
+    text-decoration: underline;
 }
 
 .keyPress {
