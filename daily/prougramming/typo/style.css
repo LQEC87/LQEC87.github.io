@@ -1,3 +1,8 @@
+:root {
+    --key-spacer: 10px;
+    --key-size: 50px;
+}
+
 body {
     margin: 0;
     height: 100vh;
@@ -8,9 +13,19 @@ body {
     height: 100%;
     width: 95%;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
+    align-content: flex-end;
+}
+
+.translate {
+    width: 100%;
+    display: block;
+    color: #000;
+    font-size: 22px;
+    text-align: center;
 }
 
 .TPS {
@@ -42,17 +57,21 @@ body {
     list-style: none;
 }
 
+.container>li {
+    margin-right: 100px;
+}
+
 .key_container {
-    margin-bottom: 20px;
+    margin-bottom: var(--key-spacer);
     display: flex;
     flex-direction: row;
     list-style: none;
 }
 
 .key {
-    height: 50px;
-    width: 50px;
-    margin-right: 20px;
+    height: var(--key-size);
+    width: var(--key-size);
+    margin-right: var(--key-spacer);
     text-align: center;
     font-size: 18px;
     line-height: 50px;
@@ -67,4 +86,8 @@ body {
 
 .keyPress {
     background-color: saddlebrown;
+}
+
+.now {
+    background-color: #0AE;
 }
