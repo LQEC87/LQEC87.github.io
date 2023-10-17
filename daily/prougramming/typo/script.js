@@ -90,7 +90,7 @@ function print_word(w, r) {
     } else {
         htmls = '<div class="text ' + w + ' char-0">' + w + '</div>';
     }
-    htmls = '<div class="translate">' + fullwordJP.indexOf(r) + '位<br>' + r + '</div>' + htmls;
+    htmls = '<div class="translate">' + (fullwordJP.indexOf(r) + 1) + '位<br>' + r + '</div>' + htmls;
     document.querySelector('.wordy').innerHTML = htmls;
 }
 
@@ -105,6 +105,7 @@ var p_key = '';
 var p_num = 0;
 document.getElementById(words[w_n].charAt(p_num).toUpperCase()).classList.add('now');
 var pressed_time = 0;
+var cleared_time = 0;
 function key_ditector(e) {
     pressed_time = pressed_time + 1;
     //完全一致系
@@ -120,6 +121,7 @@ function key_ditector(e) {
     }*/
     //順番一致系
     if (e.key == words[w_n].charAt(p_num)) {
+        cleared_time = cleared_time + 1;
         document.querySelector('.now').classList.remove('now');
         if (p_num === words[w_n].length - 1) {
             if (document.querySelectorAll('.colored') != null) {
@@ -141,5 +143,5 @@ function key_ditector(e) {
 var time = 1;
 setInterval(() => {
     time = time + 1;
-    document.querySelector('.TPS').innerHTML = "TPS:" + (Math.round(pressed_time / time * 100) / 100).toString();
+    document.querySelector('.TPS').innerHTML = "TPS:" + (Math.round(pressed_time / time * 100) / 100).toString() + "<br>TPS(true):" + (Math.round(cleared_time / time * 100) / 100).toString() + "<br><br>Miss:" + (pressed_time - cleared_time).toString() + "<br>missRatio:" + (Math.round(cleared_time / pressed_time * 100)).toString() + "%<br><br>TPM:" + (Math.round(cleared_time / (time / 60))).toString();
 }, 1000)
