@@ -67,8 +67,9 @@
     <script>
       const disp = document.getElementById('disp');
       var now = new Date();
+      function del() {disp.innerHTML="";}
       if(!((now.getMonth+1==10)&&(now.getDate==24))){
-        disp.innerHTML = "";
+        del();
       }
     </script>
   </body>
