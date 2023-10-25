@@ -61,14 +61,12 @@
     </style>
   </head>
   <body>
-    <div id="disp">
-      <div class="text">It's <span class="rainbow">MY</span><br><span class="birth">birthday!!!!</span></div>
-    </div>
+    <div class="text">It's <span class="rainbow">MY</span><br><span class="birth">birthday!!!!</span></div>
     <script>
-      const disp = document.getElementById('disp');
+      const body = document.querySelector('body');
       var now = new Date();
       if(!((now.getMonth()+1==10)&&(now.getDate()==24))){
-        disp.innerHTML = "";
+        body.innerHTML = "";
         console.log("delete display");
       }
     </script>
