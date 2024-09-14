@@ -4,7 +4,7 @@ RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.*)$ $1.html 
 
 RewriteCond %{THE_REQUEST} \.(html)\ HTTP
-RewriteRule ^(.*)\.(html)$ /lp/$1 [R=301,L]
+RewriteRule ^(.*)\.(html)$ /$1 [R=301,L]
 
 # 条件：直リンク許可サイト以外からアクセス
 RewriteCond %{HTTP_REFERER} !^http(s)?://lqec87.github.io [NC]
