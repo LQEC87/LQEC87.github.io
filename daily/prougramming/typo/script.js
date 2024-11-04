@@ -84,11 +84,11 @@ function print_word(w, r) {
     var num = 0;
     if (w.length != 1) {
         for (var char of w) {
-            htmls = htmls + '<div class="text ' + char + ' char-' + num + '">' + char + '</div>';
+            htmls = htmls + '<span class="text ' + char + ' char-' + num + '">' + char + '</span>';
             num = num + 1;
         }
     } else {
-        htmls = '<div class="text ' + w + ' char-0">' + w + '</div>';
+        htmls = '<span class="text ' + w + ' char-0">' + w + '</span>';
     }
     htmls = '<div class="translate">' + (fullwordJP.indexOf(r) + 1) + '位<br>' + r + '</div>' + htmls;
     document.querySelector('.wordy').innerHTML = htmls;
@@ -100,13 +100,13 @@ print_word(words[w_n], Tango[w_n]);
 
 //入力検出
 
-document.addEventListener('keypress', key_ditector);
+document.addEventListener('keypress', key_detector);
 var p_key = '';
 var p_num = 0;
 document.getElementById(words[w_n].charAt(p_num).toUpperCase()).classList.add('now');
 var pressed_time = 0;
 var cleared_time = 0;
-function key_ditector(e) {
+function key_detector(e) {
     pressed_time = pressed_time + 1;
     //完全一致系
     /*p_key = p_key + e.key;
