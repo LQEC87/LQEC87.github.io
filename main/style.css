@@ -74,10 +74,9 @@ h2{
     display: flex;
     margin: 0 20px;
     padding: 0 10px;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    align-content: start;
-    justify-content: center;
+    align-items: center;
 }
 .ads{
     display: flex;
