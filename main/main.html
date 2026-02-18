@@ -2,67 +2,116 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <link href="style.css" rel="stylesheet">
+        <!-- <link href="style.css" rel="stylesheet"> -->
         <!--link href="../picture/L.jpeg" rel="icon"-->
         <title>LQEC87-main</title>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+        <link rel="stylesheet" href="./output.css">
     </head>
-    <body>
-        <header>
-            <div class="hedL">LQEC87</div>
+    <body class="pt-[5dvh]">
+        <!-- ヘッダー -->
+        <header class="fixed top-0 left-0 flex flex-col h-[5dvh] w-screen bg-mygreen border-1 border-blue-700">
+            <div class="w-[140px] sm:w-[22%] h-[5dvh] text-4xl text-center content-around justify-center bg-white text-myblue">LQEC87</div>
         </header>
-        <h1>
-            <a href="about_logo" target="_blank" style="display: flex; justify-content: center;"><img oncontextmenu="return false;" src="../picture/L.jpeg" class="L-pic"></a><div class="subtitle">LQEC87</div>
+
+        <!-- ロゴ -->
+        <h1 class="flex flex-row bg-white items-center my-10">
+            <a href="./about_logo.html" target="_blank" class="flex justify-center">
+                <img oncontextmenu="return false;" src="../picture/L.jpeg" class="h-[100px] ml-5 mr-4 border-2 border-red-400 rounded-full">
+            </a>
+            <div class="text-center text-5xl text-myblue font-times">LQEC87</div>
         </h1>
-        <div class="context">
+
+        <!-- ウェルカムテキスト -->
+        <div class="flex m-2 font-cursive justify-center">
             Welcome to LQEC87's page!  This page was made for announcements, advertisements, and other links.
         </div>
-        <iframe src="notes.html" width="70%" height="auto" frameborder="0" style="border: none; margin-left: 15%; margin-right: 15%;"></iframe>
-        <div class="announcements">
-            <h2>Announce</h2>
-            <div>
-                <div class="text"><a href="../daily/page1">javascript tester</a></div>
-                <div class="text"><a href="../daily/page2">PCまとめ</a></div>
-                <div class="text"><a href="../daily/prougramming/目次">日々program</a></div>
-            </div>
+
+        <!-- フレーム -->
+        <div class="flex justify-center">
+            <iframe src="./notes.html" width="70%" height="auto" frameborder="0" class="border-none"></iframe>
         </div>
-        <div class="advertising">
-            <h2>Ads</h2>
+        
+        <!-- アナウンス(ブログ目次) -->
+        <div class="flex flex-col flex-wrap lg:mx-5 items-center mb-10">
+            <h2 class="w-full text-center font-mincho text-7xl">Announce</h2>
+            <div class="w-full text-3xl font-gothic text-center"><a style="text-decoration: revert; color: revert;" href="../daily/page1.html">javascript tester</a></div>
+            <div class="w-full text-3xl font-gothic text-center"><a style="text-decoration: revert; color: revert;" href="../daily/page2.html">PCまとめ</a></div>
+            <div class="w-full text-3xl font-gothic text-center"><a style="text-decoration: revert; color: revert;" href="../daily/prougramming/目次.html">日々program</a></div>
+        </div>
+
+        <!-- コンテンツ -->
+        <div class="flex flex-col flex-wrap lg:mx-5 items-center mb-10">
+            <h2 class="w-full text-center font-mincho text-7xl">Ads</h2>
             <video src="../video/グランツーリスモ®ＳＰＯＲＴshort.mp4" width="500px" controls><p>Your browser doesn't support HTML5 video. Here is a <a href="../video/グランツーリスモ®ＳＰＯＲＴshort.mp4">link to the video</a> instead.</p></video>
             <img src="../picture/20250426_090525.jpg" width="500px" alt="beautiful picture here"></img>
         </div>
-        <div class="ads">
-            <h2>Links</h2>
-            <div class="links">
-                <img src="../picture/Twitter social icons - square - blue.png" class="icon"><div title="twitter link, plz check." class="text"><a href="https://twitter.com/lqec87" class="downlight">@LQEC87</a></div>
+
+        <!-- 各種リンク -->
+        <div class="flex lg:ml-5 flex-wrap flex-col lg:flex-row lg:content-start lg:justify-start items-center mb-10">
+            <h2 class="lg:w-full text-center font-mincho text-7xl">Links</h2>
+            <!-- ツイッター -->
+            <div class="flex lg:flex-nowrap flex-wrap flex-row items-center justify-evenly lg:w-[25%] w-full h-[100px]">
+                <img src="../picture/Twitter social icons - square - blue.png" class="w-[50px] h-[50px]">
+                <div title="twitter link, plz check." class="lg:w-full text-3xl font-gothic text-center">
+                    <a href="https://twitter.com/lqec87">@LQEC87</a>
+                </div>
             </div>
-            <div class="links">
-                <img src="../picture/Discord_Icon_RGB-05.jpg" class="icon"><div title="My discord server, plz join." class="text"><a href="https://discord.gg/Tb4SaaAHAx" class="downlight">The server is down.</a></div>
+            <!-- ディスコード -->
+            <div class="flex lg:flex-nowrap flex-wrap flex-row items-center justify-evenly lg:w-[25%] w-full h-[100px]">
+                <img src="../picture/Discord_Icon_RGB-05.jpg" class="w-[50px] h-[50px]">
+                <div title="My discord server, plz join." class="lg:w-full text-3xl font-gothic text-center">
+                    <a href="https://discord.gg/Tb4SaaAHAx">The server is down.</a>
+                </div>
             </div>
-            <div class="links">
-                <img src="../picture/f_logo_RGB-Blue_58.png" class="icon"><div title="My Facebook, plz check." class="text"><a href="https://www.facebook.com/steav.quad/" class="downlight">Steav Quad</a></div>
+            <!-- フェイスブック -->
+            <div class="flex lg:flex-nowrap flex-wrap flex-row items-center justify-evenly lg:w-[25%] w-full h-[100px]">
+                <img src="../picture/f_logo_RGB-Blue_58.png" class="w-[50px] h-[50px]">
+                <div title="My Facebook, plz check." class="lg:w-full text-3xl font-gothic text-center">
+                    <a href="https://www.facebook.com/steav.quad/">Steav Quad</a></div>
             </div>
-            <div class="links">
-                <img src="../picture/GitHub-Mark-120px-plus.png" class="icon"><div title="My github, plz visit." class="text"><a href="https://github.com/lqec87/" class="downlight">LQEC87</a></div>
+            <!-- ギットハブ -->
+            <div class="flex lg:flex-nowrap flex-wrap flex-row items-center justify-evenly lg:w-[25%] w-full h-[100px]">
+                <img src="../picture/GitHub-Mark-120px-plus.png" class="w-[50px] h-[50px]">
+                <div title="My github, plz visit." class="lg:w-full text-3xl font-gothic text-center">
+                    <a href="https://github.com/lqec87/">LQEC87</a></div>
             </div>
-            <div class="border"></div>
-            <div class="links">
-                <img src="../picture/Reddit_Mark_OnWhite.png" class="icon"><div title="My reddit, plz visit." class="text"><a href="https://www.reddit.com/user/LQEC87" class="downlight">u/LQEC87</a></div>
+
+            <hr class="mx-[5%] lg:w-full h-[2px] bg-black invisible lg:visible">
+
+            <!-- レッディット -->
+            <div class="flex lg:flex-nowrap flex-wrap flex-row items-center justify-evenly lg:w-[25%] w-full h-[100px]">
+                <img src="../picture/Reddit_Mark_OnWhite.png" class="w-[50px] h-[50px]">
+                <div title="My reddit, plz visit." class="lg:w-full text-3xl font-gothic text-center">
+                    <a href="https://www.reddit.com/user/LQEC87">u/LQEC87</a>
+                </div>
             </div>
-            <div class="links">
-                <img src="../picture/Steam_Logo_Lockups.jpg" class="icon"><div title="My steam, plz visit." class="text"><a href="https://steamcommunity.com/id/lqec87/" class="downlight">LQEC87</a></div>
+            <!-- スチーム -->
+            <div class="flex lg:flex-nowrap flex-wrap flex-row items-center justify-evenly lg:w-[25%] w-full h-[100px]">
+                <img src="../picture/Steam_Logo_Lockups.jpg" class="w-[50px] h-[50px]">
+                <div title="My steam, plz visit." class="lg:w-full text-3xl font-gothic text-center">
+                    <a href="https://steamcommunity.com/id/lqec87/">LQEC87</a>
+                </div>
             </div>
-            <div class="links">
-                <img src="../picture/TwitchGlitchPurple.jpg" class="icon"><div title="My twitch, plz watch." class="text"><a href="https://www.twitch.tv/lqec87" class="downlight">lqec87</a></div>
+            <!-- ツイッチ -->
+            <div class="flex lg:flex-nowrap flex-wrap flex-row items-center justify-evenly lg:w-[25%] w-full h-[100px]">
+                <img src="../picture/TwitchGlitchPurple.jpg" class="w-[50px] h-[50px]">
+                <div title="My twitch, plz watch." class="lg:w-full text-3xl font-gothic text-center">
+                    <a href="https://www.twitch.tv/lqec87">lqec87</a>
+                </div>
             </div>
         </div>
+
         <!-- iframe src="https://discord.com/widget?id=885386502719303770&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe -->
-        <footer>
-            <div class="attribution">
+        
+        <!-- フッター -->
+        <footer class="flex flex-col items-center w-full h-[120px] m-0 bg-zinc-200">
+            <div class="w-full my-1 text-[10px] text-center">
                 ©2021 Valve Corporation. Steam 及び Steam ロゴは、米国及びまたはその他の国のValve Corporation の商標及びまたは登録商標です。<br>
                 ©2021 Valve Corporation. Steam and the Steam logo are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.
             </div>
-            <div class="contact">contact me: <a href="mailto:ssaa2document.arrange@outlook.com" class="downlight">ssaa2document.arrange@outlook.com</a></div>
-            <div class="rights">Copyright © 2022 LQEC87. LQEC87 and L-logo are trademarks of LQEC87.</div>
+            <div class="font-noto">contact me: <a href="mailto:ssaa2document.arrange@outlook.com" class="downlight">ssaa2document.arrange@outlook.com</a></div>
+            <div class="font-noto">Copyright © 2022 LQEC87. LQEC87 and L-logo are trademarks of LQEC87.</div>
         </footer>
     </body>
 </html>
